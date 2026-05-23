@@ -36,7 +36,7 @@ def get_feature_names(directory):
         if filename.endswith("_spatial.png"):
             feature_names.append(filename.split("_spatial")[0])
 
-    return feature_names
+    return sorted(feature_names)
 
 if "marker_names" not in st.session_state:
     data_path = "./feature_spatial_plots/marker_spatial_plots_1x8_noTitle_scaled"   # <-- update this path
